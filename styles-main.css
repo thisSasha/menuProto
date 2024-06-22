@@ -1,0 +1,177 @@
+/* Общие стили */
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* Переменные */
+:root {
+    --primary-color: #362e24;
+    /* Основной цвет фона */
+    --text-color: #fff;
+    /* Основной цвет текста */
+    --nav-background: #222;
+    /* Цвет фона навигационной панели */
+    --nav-text-color: #fff;
+    /* Цвет текста навигационной панели */
+    --nav-link-color: #fff;
+    /* Цвет ссылок навигационной панели */
+
+    --hoverColor: orange;
+    --hoverColorMin: rgb(255, 215, 141);
+}
+
+
+
+/* Стили для заголовка */
+.header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header__content {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    gap: 10px;
+    font-size: 1.1em;
+}
+
+a {
+    color: white;
+    text-decoration: underline rgba(0, 0, 0, 0);
+    transition: 400ms;
+}
+
+a:hover {
+    text-decoration: underline var(--hoverColor);
+}
+
+
+li {
+    cursor: pointer;
+    user-select: none;
+    list-style-type: none;
+    transition: 400ms;
+}
+
+li:hover {
+    color: var(--hoverColor);
+}
+
+.header__avatar {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    width: 105%;
+    transition: 400ms;
+    justify-content: center;
+}
+
+.header__avatar * {
+    transition: 400ms;
+}
+
+.avatar__button {
+    background: rgba(175, 175, 175, 0.318);
+    border: 1px solid white;
+    border-radius: 12px;
+    color: white;
+    font-size: 1.2em;
+    padding: 8px 12px;
+    transition: 400ms;
+    visibility: hidden;
+    position: absolute;
+    transform: translateX(-100%);
+}
+
+.avatar__button.active {
+    position: relative;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.avatar__button:hover {
+    border-color: var(--hoverColor);
+    color: var(--hoverColor);
+}
+
+
+.header__avatar img {
+    transition: 400ms;
+    width: 200px;
+    /* Размер аватарки */
+    border-radius: 50%;
+    /* Закругленные края */
+}
+
+.header__info {
+    max-width: 600px;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+.header__title {
+    margin: 0;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#about-cafe, h1, h2, li, a {
+    transition: 400ms;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+li, a {
+    transition: 400ms;
+    margin-bottom: 2px;
+}
+
+.header__description {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.4;
+    /* Увеличим расстояние между строками */
+}
+
+/* Стили для навигационной панели */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--nav-background);
+    padding: 10px 0;
+    text-align: center;
+    color: var(--nav-text-color);
+}
+
+.nav a {
+    color: var(--nav-link-color);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2em;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}

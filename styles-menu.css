@@ -1,0 +1,249 @@
+/* Общие стили */
+body,
+html {
+    height: 100%;
+    
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* Переменные */
+:root {
+    --primary-color2: rgb(193, 121, 32);
+    --primary-color: #362e24;
+    --primary-colorOp: #2d261e9a;
+    /* Основной цвет фона */
+    --text-color: #fff;
+    /* Основной цвет текста */
+    --nav-background: #222;
+    /* Цвет фона навигационной панели */
+    --nav-text-color: #fff;
+    /* Цвет текста навигационной панели */
+    --nav-link-color: #fff;
+    /* Цвет ссылок навигационной панели */
+
+    --hoverColor: orange;
+    --hoverColorMin: rgb(255, 215, 141);
+}
+
+.page__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-colorOp);
+    opacity: 1;
+    backdrop-filter: blur(10px);
+    z-index: 1;
+}
+
+
+/* Стили для заголовка */
+.header {
+    background: url('./bg-1.jpg') no-repeat center center/cover;
+    color: var(--text-color);
+    text-align: center;
+    padding: 60px 20px;
+    height: 100%;
+}
+
+* {
+    z-index: 8;
+}
+
+
+ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 0;
+    padding: 0;
+    gap: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.1em;
+}
+
+a {
+    color: white;
+    text-decoration: underline rgba(0, 0, 0, 0);
+    transition: 400ms;
+}
+
+a:hover {
+    text-decoration: underline var(--hoverColor);
+}
+
+
+
+
+.avatar__button:hover {
+    border-color: var(--hoverColor);
+    color: var(--hoverColor);
+}
+
+
+.header__avatar img {
+    transition: 400ms;
+    width: 200px;
+    /* Размер аватарки */
+    border-radius: 50%;
+    /* Закругленные края */
+}
+
+.header__avatar img:hover {
+    box-shadow: 0 0 4px 2px var(--hoverColor);
+}
+
+.header__info {
+    max-width: 600px;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+.header__title {
+    margin: 0;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#about-cafe,
+h1,
+h2,
+li,
+a {
+    transition: 400ms;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+li,
+a {
+    transition: 400ms;
+    margin-bottom: 2px;
+}
+
+#about-cafe:hover,
+h1:hover,
+h2:hover {
+    color: var(--hoverColorMin);
+}
+
+.header__description {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.4;
+    /* Увеличим расстояние между строками */
+}
+
+/* Стили для навигационной панели */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--nav-background);
+    padding: 10px 0;
+    text-align: center;
+    color: var(--nav-text-color);
+}
+
+.nav a {
+    color: var(--nav-link-color);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2em;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    padding: 12px 4px;
+    text-align: center;
+    background-color: var(--nav-background);
+}
+
+
+
+
+
+
+
+
+
+
+
+.header__dishes {
+    position: relative;
+    max-height: calc(100vh - 100px);
+    height: 75%;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.dishes__list {
+    overflow-y: scroll;
+    padding-top: 80px;
+}
+
+.dishes__nav {
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+    position: fixed;
+    width: calc(100vw - 40px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dishes__filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.filter {
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    font-size: 16px;
+    background: transparent;
+    padding: 10px 16px;
+    border-radius: 16px;
+    transition: 400ms;
+}
+
+.filter.active {
+    background: var(--text-color);
+    color: black;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.dishes_categories {
+    border: 0;
+    font-size: 16px;
+    background-color: var(--text-color);
+    padding: 10px 16px;
+    border-radius: 16px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/2c09f7fb88.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню - Созвездие Вкусов</title>
+    <link rel="stylesheet" href="./styles-menu.css">
+</head>
+
+<body>
+    <div class="page__overlay"></div>
+    <nav class="nav">
+        <a href="index.html">Other language</a>
+        <a class="avatar__button" href="index-ru.html">Инфо</a>
+    </nav>
+    <header class="header">
+        <div class="header__dishes">
+            <div class="dishes__nav">
+                <div class="dishes__filters"></div>
+                <select name="dishes__categories" id="dishes__categories" class="dishes__categories"></select>
+            </div>
+            <div class="dishes__list"></div>
+        </div>
+    </header>
+    <footer>
+        <a href="tel:+375291112233">
+            <i class="fa-solid fa-phone"></i> +375-29-111-22-33
+        </a>
+    </footer>
+    <script src="./store.js" type="module"></script>
+    <script src="./menuScript.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/2c09f7fb88.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Информация -Созвездие Вкусов</title>
+    <link rel="stylesheet" href="styles-main.css">
+</head>
+
+<body data-lang="ru">
+    <nav class="nav">
+        <a href="index.html">Other language</a>
+        <a href="menu-ru.html">Меню</a>
+    </nav>
+    <header class="header">
+        <div class="header__content">
+            <div class="header__avatar">
+                <img src="cafe-avatar.jpg" alt="Avatar">
+                <a class="avatar__button" href="menu-ru.html">Меню <i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+            <div class="header__info">
+                <h1 class="header__title">Созвездие Вкусов</h1>
+                <p class="header__description" id="about-cafe">В ресторане "Созвездие Вкусов" мы приглашаем вас на
+                    удивительное кулинарное путешествие сквозь галактику вкусов и ароматов. Погрузитесь в атмосферу
+                    комфорта и изысканности, наслаждайтесь великолепным обслуживанием и откройте для себя новые грани
+                    вкуса в ресторане "Созвездие Вкусов".
+                </p>
+                <h2>Сделать заказ</h2>
+                <ul>
+                    <li><i class="fa-solid fa-user"></i> Оффлайн</li>
+                    <a href="tel:+375291112233">
+                        <li><i class="fa-solid fa-phone"></i> +375-29-111-22-33</li>
+                    </a>
+                    <a href="https://t.me/example">
+                        <li><i class="fab fa-telegram"></i> Телеграм</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <script>
+        setTimeout(() => {
+            document.querySelector('.avatar__button').classList.toggle('active');
+        }, 1000);
+    </script>
+</body>
+
+</html>
